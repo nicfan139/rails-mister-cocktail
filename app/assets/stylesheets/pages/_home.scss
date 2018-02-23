@@ -1,40 +1,20 @@
+// Specific CSS for your home-page
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body {
   background-color: whitesmoke;
   text-align: center;
-  margin: auto;
-  width: 80vw;
 }
 
 a {
   text-decoration: none;
 }
 
-
-.banner {
-  height: 400px;
-  background-image: url('https://desktopwalls.net/wp-content/uploads/2014/06/The%20Elements%20Earth%20Fire%20Water%20Air%20Drinks%20Glasses%20Free%20Wallpaper%20HD.jpg');
-  background-size: cover;
-  box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.3);
-  margin-bottom: 30px;
-}
-
-.banner-content {
-  font-family: Helvetica;
-  text-align: center;
-  padding-top: 20px;
-  margin: auto;
-  h1 {
-    font-size: 70px;
-    color: whitesmoke;
-  }
-}
-
 .main {
   text-align: center;
   margin: auto;
+  padding-top: 30px;
 }
 
 .card {
@@ -55,15 +35,16 @@ a {
   padding-top: 60px;
   padding-bottom: 60px;
   .card-link a {
-    color: black;
+    text-decoration: none;
+    color: red;
     font-size: 30em;
     position: absolute;
-    z-index: 2;
     background: black;
     opacity: 0;
     text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   }
   .card-link a:hover {
+    text-decoration:none;
     color: blue;
     opacity: 0.1;
     font-weight: bold;
@@ -73,14 +54,21 @@ a {
 .btn {
   a {
     font-size: 30px;
+    padding: 10px;
     color: whitesmoke;
+    background-color: blue;
     font-weight: 400;
-    transition-property: font-weight;
+    border-radius: 7px;
+    transition-property: padding;
     transition-duration: 0.5s;
   }
   a:hover {
-    color: whitesmoke;
     font-weight: bold;
+    padding: 12px;
     text-decoration: none;
   }
+}
+
+.drink {
+  border-radius: 10px;
 }

@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<div class="banner">
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://png.pngtree.com/thumb_back/fh260/back_pic/03/57/51/6457a0b15da95e7.jpg');">
   <div class="banner-content">
     <h1>Cocktails</h1>
+    <p>Explore our finest selection of drinks</p>
   </div>
 </div>
 
@@ -11,7 +12,7 @@
     <div class="row">
       <% @cocktails.each do |cocktail| %>
       <div class="col-sm-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://liquor.s3.amazonaws.com/wp-content/uploads/2015/03/hub_spirited_cocktail_gin.jpg'); background-size: cover;">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cocktail.photo %>); background-size: cover;">
           <%= link_to cocktail.name, cocktail , { :class=>"card-link" } %>
         </div>
       </div>
@@ -23,5 +24,7 @@
 <div>&nbsp;</div>
 
 <div class="btn">
-  <button type="button" class="btn btn-primary"><%= link_to 'Create a new cocktail!', new_cocktail_path %></button>
+  <%= link_to 'Create a new cocktail!', new_cocktail_path %>
 </div>
+
+<div>&nbsp;</div>

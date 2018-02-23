@@ -1,15 +1,18 @@
-<div>
-  <img src="" alt="">
+<div>&nbsp;</div>
+
+<div style="border-radius: 5px">
+  <%= cl_image_tag @cocktail.photo, height: 400, width: 400, crop: :fill %>
 </div>
 
-<div>
-  <p><strong>Name:</strong></p>
-  <%= @cocktail.name %>
-</div>
+<div>&nbsp;</div>
 
 <div>
-  <strong>Ingredients:</strong>
+  <h1><%= @cocktail.name %></strong></h1>
 </div>
 
-<%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail) %> |
+<div>&nbsp;</div>
+
+<%= link_to 'Delete this cocktail', cocktail_path, method: :delete %><br>
 <%= link_to 'Back to cocktails', cocktails_path %>
+
+<div>&nbsp;</div>
