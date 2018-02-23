@@ -3,7 +3,7 @@
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://png.pngtree.com/thumb_back/fh260/back_pic/03/57/51/6457a0b15da95e7.jpg');">
   <div class="banner-content">
     <h1>Cocktails</h1>
-    <p>Explore our finest selection of drinks</p>
+    <p>Explore our finest selection of drinks!</p>
   </div>
 </div>
 
@@ -11,7 +11,7 @@
   <div class="container">
     <div class="row">
       <% @cocktails.each do |cocktail| %>
-      <div class="col-sm-4">
+      <div class="col-sm-4" style="height: 300px;">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cocktail.photo %>); background-size: cover;">
           <%= link_to cocktail.name, cocktail , { :class=>"card-link" } %>
         </div>
@@ -28,3 +28,7 @@
 </div>
 
 <div>&nbsp;</div>
+
+<div class="footer">
+  <p>This page was created by <a href="http://www.github.com/nicfan139">Nicolas Fan</a>
+</div>
