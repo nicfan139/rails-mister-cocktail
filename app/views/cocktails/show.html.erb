@@ -1,0 +1,15 @@
+<div>
+  <img src="" alt="">
+</div>
+
+<div>
+  <p><strong>Name:</strong></p>
+  <%= @cocktail.name %>
+</div>
+
+<div>
+  <strong>Ingredients:</strong>
+</div>
+
+<%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail) %> |
+<%= link_to 'Back to cocktails', cocktails_path %>
