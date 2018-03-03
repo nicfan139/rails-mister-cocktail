@@ -5,6 +5,7 @@
 body {
   background-color: whitesmoke;
   text-align: center;
+  position: relative;
 }
 
 a {
@@ -25,12 +26,11 @@ a {
     background-color: blue;
     font-weight: 400;
     border-radius: 7px;
-    transition-property: padding;
+    transition-property: all;
     transition-duration: 0.5s;
   }
   a:hover {
-    font-weight: bold;
-    padding: 12px;
+    font-size: 32px;
     text-decoration: none;
   }
 }
@@ -39,7 +39,23 @@ a {
   border-radius: 10px;
 }
 
+
+// Stick footer bar to the bottom of the viewport
+
+.main-body {
+  min-height: 90vh;
+  padding-bottom: 10vh;
+}
+
 .footer {
+  position: absolute;
+  height: 10vh;
+  width: 100%;
   padding: 30px;
-  background-color: rgba(155,155,155, 0.2)
+  margin-top: 30px;
+  background-color: rgba(155,155,155, 0.2);
+  align-items: center;
+  p {
+    margin: auto;
+  }
 }

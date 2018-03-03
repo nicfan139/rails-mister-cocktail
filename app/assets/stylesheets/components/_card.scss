@@ -1,21 +1,19 @@
 .card {
   height: 260px;
-  text-shadow: 0 10px 10px rgba(0,0,0,0.6);
   background-size: cover !important;
   background-position: center;
-  color: white;
   position: relative;
   margin-top: 20px;
   margin-bottom: 50px;
-  box-shadow: 2px 10px 10px rgba(0,0,0,0.6);
+  box-shadow: 2px 10px 10px rgba(0,0,0,0.2);
   border-radius: 10px;
-  transition-property: height;
+  transition-property: all;
   transition-duration: 0.5s;
-}
-
-.card:hover {
-    height: 280px;
+  &:hover {
+    height: 270px;
+    box-shadow: 2px 10px 10px rgba(0,0,0,0.5);
   }
+}
 
 .card-user {
   position: absolute;
@@ -45,15 +43,25 @@
   font-weight: lighter;
 }
 .card-link {
+  color: whitesmoke;
+  text-shadow: 0px 5px 5px rgba(0,0,0,0.2);
+  font-size: 30px;
   position: absolute;
+  text-align: center;
+  text-decoration: none;
   top: 0;
   bottom: 0;
   right: 0;
-  width: 100%;
+  left: 0;
+  border-radius: 10px;
+  margin: 100px auto;
   z-index: 2;
-  background: black;
   opacity: 0;
-}
-.card-link:hover {
-  opacity: 0.1;
+  transition-property: all;
+  transition-duration: 0.5s;
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
+    color: white;
+  }
 }

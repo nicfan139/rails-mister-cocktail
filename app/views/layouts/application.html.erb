@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsMisterCocktail</title>
+    <title>Mini Cocktail Bar</title>
     <%= csrf_meta_tags %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,6 +10,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="main-body">
+      <%= yield %>
+    </div>
+    <div class="footer">This page was created by <a href="http://www.github.com/nicfan139">Nicolas Fan</a></div>
   </body>
 </html>

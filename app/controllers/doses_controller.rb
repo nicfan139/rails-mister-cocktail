@@ -1,10 +1,4 @@
 class DosesController < ApplicationController
-  def new
-    # we need @cocktail in our `simple_form_for`
-    @cocktail = Cocktail.find(params[:cocktail_id])
-    @dose = Dose.new
-  end
-
   def create
     @dose = Dose.new(dose_params)
     # we need `cocktail_id` to asssociate dose with corresponding cocktail
@@ -32,6 +26,6 @@ class DosesController < ApplicationController
   private
 
   def dose_params
-    params.require(:dose).permit(:description, :cocktail_id, :ingredient_id)
+    params.require(:dose).permit(:description)
   end
 end
