@@ -5,6 +5,7 @@ class CocktailsController < ApplicationController
 
   def show
     @cocktail = Cocktail.find(params[:id])
+    @dose = Dose.new
   end
 
   def new
@@ -16,7 +17,7 @@ class CocktailsController < ApplicationController
 
     respond_to do |format|
       if @cocktail.save
-        format.html { redirect_to @cocktail, notice: 'Your new cocktail was successfully created.' }
+        format.html { redirect_to root_path, notice: "#{@cocktail.name} is now added to the cocktails collection!" }
         format.json { render :show, status: :created, location: @cocktail }
       else
         format.html { render :new }

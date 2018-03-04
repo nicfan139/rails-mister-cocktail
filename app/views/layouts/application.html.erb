@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   </head>
 
   <body>
     <div class="main-body">
       <%= yield %>
     </div>
-    <div class="footer">This page was created by <a href="http://www.github.com/nicfan139">Nicolas Fan</a></div>
+    <div class="footer">This webpage was built with Ruby on Rails <i class="devicon-rails-plain colored"></i> by <a href="http://www.github.com/nicfan139">Nicolas Fan</a></div>
   </body>
 </html>

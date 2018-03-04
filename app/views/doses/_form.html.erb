@@ -1,4 +1,6 @@
 <%= simple_form_for([cocktail, dose], remote: true) do |f| %>
+  <%= f.error_notification %>
+
   <%= f.input :description %>
   <%= f.submit %>
 <% end %>

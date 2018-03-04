@@ -1,32 +1,45 @@
+<div class="cocktail-banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://www.stephensons.com/img/cms/cocktail%20banner.jpg'); background-size: cover;">
+  <div class="cocktail-banner-content">
+    <h1><strong><%= @cocktail.name %></strong></h1>
+  </div>
+</div>
+
 <div>&nbsp;</div>
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-6">
-      <%= cl_image_tag @cocktail.photo, height: 350, width: 350, crop: :fill , class: 'cocktail-pic'%>
+    <div class="col-sm-4">
+      <div class="box" >
+        <%= cl_image_tag @cocktail.photo, height: 300, width: 300, crop: :fill , class: 'cocktail-pic'%>
+      </div>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-4">
       <div class="box">
-        <h1><%= @cocktail.name %></strong></h1>
-
-        <div class="dose-list">
+        <div id="doses">
           <h3>Dosage</h3>
-          <ul>
+          <% if @cocktail.doses.blank? %>
+            Be the first to write the dosage for <%= @cocktail.name %>!
+          <% else %>
             <% @cocktail.doses.each do |dose| %>
-              <li><%= dose.description %></li>
+              <%= render 'doses/show', dose: dose %>
             <% end %>
-          </ul>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="box">
+        <div class="new-dose" id="dose-form">
+          <h4>Create a new dose</h4>
+          <%= render 'doses/form', cocktail: @cocktail, dose: @dose %>
         </div>
 
-        <div class="new-dose">
-          <%= render("doses/form", cocktail: @cocktail, dose: @dose) %>
-        </div>
+        <hr>
 
         <div class="cocktail-options">
-          <%= link_to 'Delete this cocktail', cocktail_path, method: :delete %><br>
-          <%= link_to 'Back to cocktails', cocktails_path %>
+          <p><i class="fas fa-trash-alt"></i>&nbsp;&nbsp;<%= link_to 'Delete this cocktail', cocktail_path, method: :delete %></p>
+          <p><i class="fas fa-caret-square-left"></i>&nbsp;&nbsp;<%= link_to 'Back to cocktails', cocktails_path %></p>
         </div>
-
       </div>
     </div>
   </div>
