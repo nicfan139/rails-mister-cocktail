@@ -16,6 +16,10 @@ Languages & Frameworks used:
 
 * SCSS
 
+* Bootstrap
+
 * JavaScript
+
+* CoffeeScript
 
 * PostgreSQL
