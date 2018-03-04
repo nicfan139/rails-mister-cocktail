@@ -1,24 +1,21 @@
-# README
+# Mini Cocktail Bar Catalog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+One of my very first webpages built using Ruby on Rails!
 
-Things you may want to cover:
+Link to webpage: https://mini-cocktail-bar.herokuapp.com/cocktails
 
-* Ruby version
+Languages & Frameworks used:
 
-* System dependencies
+* Ruby
 
-* Configuration
+* Ruby on Rails
 
-* Database creation
+* HTML5
 
-* Database initialization
+* CSS3
 
-* How to run the test suite
+* SCSS
 
-* Services (job queues, cache servers, search engines, etc.)
+* JavaScript
 
-* Deployment instructions
-
-* ...
+* PostgreSQL

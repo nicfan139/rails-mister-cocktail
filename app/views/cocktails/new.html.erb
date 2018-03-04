@@ -1,18 +1,19 @@
-<div>
-  <img src="" alt="">
+<div class="title">
+  <h1><i class="fas fa-glass-martini"></i>&nbsp;&nbsp;Add a New Cocktail&nbsp;&nbsp;<i class="fas fa-glass-martini"></i></h1>
 </div>
 
-<h1>Add a New Cocktail</h1>
+<div>&nbsp;</div>
+
+<div class="form">
+  <%= simple_form_for(@cocktail) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
+
 
 <div>&nbsp;</div>
 
-<%= simple_form_for(@cocktail) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.button :submit %>
-<% end %>
-
-<div>&nbsp;</div>
-
-<%= link_to 'Back to Cocktails', cocktails_path %>
+<i class="fas fa-caret-square-left"></i>&nbsp;&nbsp;<%= link_to 'Back to Cocktails', cocktails_path %>

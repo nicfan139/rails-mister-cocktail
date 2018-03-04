@@ -1,0 +1,16 @@
+function refreshForm(formHTML) {
+  const doseForm = document.getElementById("new_dose");
+  doseForm.innerHTML = formHTML;
+}
+
+function addDose(doseHTML) {
+  const doses = document.getElementById('doses');
+  doses.insertAdjacentHTML('beforeend', doseHTML);
+}
+
+<% if @dose.errors.any? %>
+  refreshForm('<%= j render "doses/form", cocktail: @cocktail, dose: @dose %>');
+<% else %>
+  addDose('<%= j render "doses/show", dose: @dose %>');
+  refreshForm('<%= j render "doses/form", cocktail: @cocktail, dose: Dose.new %>');
+<% end %>
