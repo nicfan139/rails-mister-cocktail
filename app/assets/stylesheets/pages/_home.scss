@@ -22,7 +22,6 @@ a {
 
 .main-body {
   min-height: 90vh;
-  padding-bottom: 10vh;
 }
 
 .footer {
@@ -30,39 +29,9 @@ a {
   height: 10vh;
   width: 100%;
   padding: 30px;
-  margin-top: 30px;
   background-color: rgba(155,155,155, 0.2);
   align-items: center;
   p {
     margin: auto;
   }
-}
-
-.btn-container {
-  height: 40px;
-  margin-bottom: 20px;
-}
-
-.btn {
-  a {
-    height: 100%;
-    font-size: 30px;
-    padding: 10px;
-    color: whitesmoke;
-    background-color: blue;
-    font-weight: 400;
-    border-radius: 7px;
-    box-shadow: 2px 10px 10px rgba(0,0,0,0.2);
-    transition-property: all;
-    transition-duration: 0.5s;
-  }
-  a:hover {
-    font-size: 32px;
-    text-decoration: none;
-    box-shadow: 2px 10px 10px rgba(0,0,0,0.5);
-  }
-}
-
-.drink {
-  border-radius: 10px;
 }

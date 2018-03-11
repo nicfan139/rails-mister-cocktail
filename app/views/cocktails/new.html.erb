@@ -1,19 +1,26 @@
-<div class="title">
-  <h1><i class="fas fa-glass-martini"></i>&nbsp;&nbsp;Add a New Cocktail&nbsp;&nbsp;<i class="fas fa-glass-martini"></i></h1>
+<div class="form-background" style="background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('https://www.cwbeggs.com/media/wysiwyg/smartwave/blog/mixologie-banner1280x1020.png')">
+  <div class="form-container">
+    <div class="title">
+      <h1><i class="fas fa-glass-martini"></i>&nbsp;&nbsp;Add a New Cocktail!</h1>
+    </div>
+
+    <div>&nbsp;</div>
+
+    <div class="form">
+      <%= simple_form_for(@cocktail) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
+        <div class="btn-submit-container">
+          <%= f.button :submit , class: "btn-submit"%>
+        </div>
+      <% end %>
+    </div>
+
+    <hr>
+
+    <i class="fas fa-caret-square-left"></i>&nbsp;&nbsp;<%= link_to 'Back to Cocktails', root_path %>
+  </div>
 </div>
 
-<div>&nbsp;</div>
 
-<div class="form">
-  <%= simple_form_for(@cocktail) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
-    <%= f.button :submit %>
-  <% end %>
-</div>
-
-
-<div>&nbsp;</div>
-
-<i class="fas fa-caret-square-left"></i>&nbsp;&nbsp;<%= link_to 'Back to Cocktails', cocktails_path %>
