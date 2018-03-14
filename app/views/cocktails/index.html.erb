@@ -16,11 +16,13 @@
   <div class="container">
     <div class="row">
       <% @cocktails.each do |cocktail| %>
-      <div class="col-sm-4" style="height: 300px;">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cocktail.photo %>); background-size: cover;">
-          <%= link_to cocktail.name, cocktail , { :class=>"card-link" } %>
+        <div class="col-sm-4">
+          <div class="card-container">
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cocktail.photo %>); background-size: cover;">
+              <%= link_to cocktail.name, cocktail , { :class=>"card-link" } %>
+            </div>
+          </div>
         </div>
-      </div>
       <% end %>
   </div>
 </div>

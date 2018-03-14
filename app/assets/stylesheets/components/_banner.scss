@@ -24,5 +24,7 @@
 }
 
 .banner-content {
-  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -1,3 +1,4 @@
+/* Homepage Banner Button to view cocktails */
 .btn-view-container {
   height: 30px;
 }
@@ -22,9 +23,11 @@
   }
 }
 
+
+/* New Cocktail Button on Homepage */
 .btn-new-container {
   height: 40px;
-  margin-bottom: 60px;
+  margin: 0px 0px 30px 0px;
 }
 .btn-new {
   a {
@@ -46,6 +49,8 @@
   }
 }
 
+
+/* Form Submit Button */
 .btn-submit-container {
   height: 60px;
   display: flex;

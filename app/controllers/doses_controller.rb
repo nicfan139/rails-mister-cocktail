@@ -22,7 +22,7 @@ class DosesController < ApplicationController
     @dose = Dose.find(params[:id])
     @dose.destroy
 
-    redirect_to dose_path
+    redirect_to cockatil_path
   end
 
   private

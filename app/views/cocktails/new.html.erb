@@ -4,13 +4,14 @@
       <h1><i class="fas fa-glass-martini"></i>&nbsp;&nbsp;Add a New Cocktail!</h1>
     </div>
 
-    <div>&nbsp;</div>
+    <hr>
 
     <div class="form">
       <%= simple_form_for(@cocktail) do |f| %>
         <%= f.input :name %>
         <%= f.input :photo %>
         <%= f.input :photo_cache, as: :hidden %>
+        <hr>
         <div class="btn-submit-container">
           <%= f.button :submit , class: "btn-submit"%>
         </div>
